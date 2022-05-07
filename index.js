@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('./src/generateHTML.js');
+const createFile = require('./src/generateHTML.js');
 const path = require('path');
-// const html = require('./source/genHTML.js');
+const html = require('./src/generateHTML.js');
 const { start } = require('repl');
 const distribution = path.resolve(__dirname, 'dist');
 const outIndex = path.join(distribution, 'index.html');
@@ -30,7 +30,8 @@ function newEmployee() {
             promptIntern ();
         } else if (response.newEmployee === "No more team members") {
             console.log('Your team is complete!')
-            // generateTeam ();
+            console.log(team);
+            createFile(team);
         }
     })
 }
@@ -109,9 +110,14 @@ function promptIntern() {
             type: 'input',
             name: 'id',
             message: 'What is the intern\'s id?'
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the intern\'s school?'
         }
     ]).then(response => {
-        const intern = new Intern(response.name, response.id, response.email);
+        const intern = new Intern(response.name, response.id, response.email, response.school);
         team.push(intern);
         newEmployee();
     })
