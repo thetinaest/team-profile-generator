@@ -1,14 +1,13 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
+// const fs = require('fs');
 const createFile = require('./src/generateHTML.js');
 const path = require('path');
-const html = require('./src/generateHTML.js');
-const { start } = require('repl');
+// const { start } = require('repl');
 const distribution = path.resolve(__dirname, 'dist');
 const outIndex = path.join(distribution, 'index.html');
 const team = [];
 
-const Employee = require('./lib/Employee.js');
+// const Employee = require('./lib/Employee.js');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
