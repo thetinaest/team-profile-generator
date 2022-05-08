@@ -35,12 +35,12 @@ function generateCards(team) {
         switch (emp.getRole()) {
             case "Manager":
                 return `
-                    <section>
+                    <section id="card">
                         <div id="title">
                             <h2>${emp.getName()}</h2>
-                            <p>Manager</p>
+                            <p><i class="fa-solid fa-mug-hot"></i> Manager</p>
                         </div>
-                        <div>
+                        <div id="content">
                             <p>ID: ${emp.getId()}</p>
                             <p>Email: <a href="mailto:${emp.getEmail()}">${emp.getEmail()}</a></p>
                             <p>Office Number: ${emp.officeNumber}</p>
@@ -49,12 +49,12 @@ function generateCards(team) {
                     `
             case "Engineer":
                 return `
-                    <section>
+                    <section id="card">
                         <div id="title">
                             <h2>${emp.getName()}</h2>
-                            <p>Engineer</p>
+                            <p><i class="fa-solid fa-glasses"></i> Engineer</p>
                         </div>
-                        <div>
+                        <div id="content">
                             <p>ID: ${emp.getId()}</p>
                             <p>Email: <a href="mailto:${emp.getEmail()}">${emp.getEmail()}</a></p>
                             <p>Github: <a href='https://github.com/${emp.github}' target='_blank'>${emp.github}</a></p>
@@ -63,12 +63,12 @@ function generateCards(team) {
                     `
             case "Intern":
                 return `
-                    <section>
+                    <section id="card">
                         <div id="title">
                             <h2>${emp.getName()}</h2>
-                            <p>Intern</p>
+                            <p><i class="fa-solid fa-user-graduate"></i> Intern</p>
                         </div>
-                        <div>
+                        <div id="content">
                             <p>ID: ${emp.getId()}</p>
                             <p>Email: <a href="mailto:${emp.getEmail()}">${emp.getEmail()}</a></p>
                             <p>School: ${emp.school}</p>

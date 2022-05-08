@@ -1,0 +1,44 @@
+:root {
+    --red: #e84756;
+    --blue: #0077f7; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--red);
+    text-align: center;
+    color: white;
+    padding: 25px;
+}
+
+#teamMembers {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 10px 5px 5px rgb(122, 122, 122);
+}
+
+#title {
+    background: #0077f7;
+    color: white;
+    padding: 10px;
+}
+
+#content p {
+    padding: 5px;
+    border-top: solid 1px grey;
+}
+  
